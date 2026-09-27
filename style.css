@@ -31,7 +31,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* NAVIGATION */
 nav {
     background-color: var(--bg-card);
     border-bottom: 1px solid var(--border-color);
@@ -80,7 +79,6 @@ nav h1:hover {
     color: var(--accent-blue);
 }
 
-/* HERO SECTION */
 .hero {
     border-bottom: 1px solid var(--border-color);
     background: radial-gradient(circle at 50% 0%, rgba(88, 166, 255, 0.05) 0%, transparent 70%);
@@ -118,7 +116,6 @@ nav h1:hover {
     margin: 0 auto;
 }
 
-/* CONTAINER & SECTIONS */
 .container {
     max-width: 1050px;
     margin: 0 auto;
@@ -136,7 +133,6 @@ nav h1:hover {
     font-weight: 600;
 }
 
-/* CARDS */
 .card {
     display: flex;
     gap: 28px;
@@ -263,7 +259,6 @@ strong {
     color: var(--accent-blue);
 }
 
-/* SKILLS GRID */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -310,7 +305,6 @@ strong {
     font-size: 0.75rem;
 }
 
-/* FOOTER */
 footer {
     border-top: 1px solid var(--border-color);
     background-color: var(--bg-card);
@@ -368,7 +362,6 @@ footer {
     margin-top: 20px;
 }
 
-/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .card {
         flex-direction: column;
