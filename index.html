@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrNoxh — Roblox Luau Engineer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h1>portfolio DrNoxh</h1>
+        <div class="nav-links">
+            <a href="#projects">Projets</a>
+            <a href="#skills">Compétences</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-content">
+            <span class="hero-subtitle">Roblox Luau / Gameplay & Backend Developer</span>
+            <h2>Conception d'architectures robustes & de systèmes gameplay sur Roblox.</h2>
+            <p>Développeur spécialisé dans la logique client-serveur, la manipulation avancée de caméra, l'optimisation mémoire et la création d'interfaces dynamiques.</p>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- SECTION PROJETS -->
+        <section id="projects" class="section-title">
+            <h3>// Key_Projects</h3>
+        </section>
+
+        <!-- Projet 1 : Surveillance Camera System -->
+        <section class="card">
+            <div class="video-side">
+                <video controls preload="metadata">
+                    <source src="video/camera.mp4" type="video/mp4">
+                    Ton navigateur ne supporte pas la lecture de vidéo.
+                </video>
+            </div>
+            <div class="info-side">
+                <h2>Système de Caméras de Surveillance (Scriptable Camera)</h2>
+                <div class="tags">
+                    <span>Luau</span>
+                    <span>Camera API</span>
+                    <span>CFrame</span>
+                    <span>UserInputService</span>
+                </div>
+                <p>Architecture de vidéosurveillance modulaire permettant de permuter dynamiquement la vue du joueur vers des ancrages 3D distants sans altérer l'état du personnage.</p>
+                <ul>
+                    <li><strong>Indexation Dynamique :</strong> Lecture à chaud du dossier du <code>Workspace</code> via <code>GetChildren()</code> au moment de l'entrée utilisateur pour supporter l'ajout de caméras en runtime.</li>
+                    <li><strong>Contrôle Caméra :</strong> Basculement du mode natif vers <code>Enum.CameraType.Scriptable</code> avec interpolation de matrice <code>CFrame</code>.</li>
+                    <li><strong>Gestion des Entrées :</strong> Capture via <code>UserInputService</code> avec vérification stricte du flag <code>gameProcessedEvent</code>.</li>
+                    <li><strong>Restauration d'État :</strong> Réinitialisation propre vers <code>Enum.CameraType.Custom</code> et réassignation automatique du <code>CameraSubject</code>.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projet 2 : ViewportFrame Character Inspector -->
+        <section class="card">
+            <div class="video-side">
+                <video controls preload="metadata">
+                    <source src="video/2026-09-27 16-59-57.mp4" type="video/mp4">
+                    Ton navigateur ne supporte pas la lecture de vidéo.
+                </video>
+            </div>
+            <div class="info-side">
+                <h2>Inspection 3D & Personnage Dynamique (ViewportFrame System)</h2>
+                <div class="tags">
+                    <span>Luau</span>
+                    <span>ViewportFrame</span>
+                    <span>WorldModel</span>
+                    <span>Camera Manipulation</span>
+                </div>
+                <p>Conception d'une interface d'inspection 3D en temps réel projetant le modèle du personnage joueur dans un élément d'interface, optimisée pour les menus d'inventaire et d'équipement.</p>
+                <ul>
+                    <li><strong>Clonage & Nettoyage :</strong> Duplication côté client via <code>Character:Clone()</code> et purge des scripts locaux inutiles pour réduire la charge CPU.</li>
+                    <li><strong>Support WorldModel :</strong> Intégration d'un <code>WorldModel</code> sous le <code>ViewportFrame</code> pour préserver le fonctionnement des animations et des liaisons <code>Motor6D</code>.</li>
+                    <li><strong>Cadrage Dédié :</strong> Calcul matriciel <code>CFrame</code> sur une instance <code>Camera</code> isolée pour assurer un rendu d'angle constant quelle que soit la morphologie du personnage.</li>
+                    <li><strong>Gestion Mémoire :</strong> Vidage du cache et appel systématique à <code>Destroy()</code> lors du déchargement du composant UI pour écarter tout risque de fuite de mémoire.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- SECTION COMPÉTENCES -->
+        <section id="skills" class="section-title">
+            <h3>// Technical_Skills</h3>
+        </section>
+
+        <section class="skills-grid">
+            <div class="skill-card">
+                <h4>Core & Language</h4>
+                <ul>
+                    <li>Luau (Object-Oriented Programming, Metatables)</li>
+                    <li>Architecture Client-Serveur & Remote Events/Functions</li>
+                    <li>Gestion de la mémoire & Profiling (Garbage Collection)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h4>Engine & APIs</h4>
+                <ul>
+                    <li>Camera Manipulation & CFrame Math</li>
+                    <li>UserInputService & ContextActionService</li>
+                    <li>ViewportFrames & WorldModel Animation Handling</li>
+                    <li>DataStores & ProfileService (Data Persistence)</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h4>Tooling & Workflow</h4>
+                <ul>
+                    <li>Roblox Studio & Rojo Workflow</li>
+                    <li>VS Code / Luau Language Server</li>
+                    <li>Git & Version Control</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER / CONTACT -->
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Travaillons Ensemble</h3>
+            <p>Disponible pour des projets de développement de jeux, la création de systèmes sur-mesure ou du freelancing.</p>
+            <div class="contact-links">
+                <a href="discord://users/1091629948747399179" class="contact-btn">Discord</a>
+            </div>
+            <span class="copyright">© 2026 DrNoxh. Built with HTML, CSS & Luau.</span>
+        </div>
+    </footer>
+
+</body>
+</html>
